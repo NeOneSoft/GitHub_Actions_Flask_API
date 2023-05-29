@@ -24,3 +24,5 @@ jobs:
       - name: Build and push
         run: |
           docker buildx build --platform linux/arm64/v8 --no-cache -t ${{ secrets.DOCKERHUB_USERNAME }}/python-mysql-madness:1.0 .
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/python-mysql-madness:1.0
+          
